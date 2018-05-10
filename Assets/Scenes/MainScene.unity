@@ -512,6 +512,7 @@ GameObject:
   - component: {fileID: 940011810}
   - component: {fileID: 940011809}
   - component: {fileID: 940011813}
+  - component: {fileID: 940011814}
   m_Layer: 0
   m_Name: Fps_view
   m_TagString: MainCamera
@@ -594,6 +595,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e03614a18ff344880a30c6b050bfa73c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &940011814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 940011808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453b044f1ced84f5f8ccbe88635c57a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletGameObject: {fileID: 0}
 --- !u!1 &1779389355
 GameObject:
   m_ObjectHideFlags: 0
