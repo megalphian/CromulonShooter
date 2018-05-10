@@ -6,16 +6,21 @@ public class PlayerShooting : MonoBehaviour
 	private GameObject bullet;
 	private Rigidbody bullet_rb;
 	public GameObject bulletGameObject;
+	private GameObject player;
 
-
-
-    // Use this for initialization
-    void Shoot()
+	private void Awake()
+	{
+		player = GameObject.FindGameObjectWithTag("Player");
+	}
+    
+	// Use this for initialization
+	void Shoot()
     {
 		bullet = Instantiate(bulletGameObject);
 		bullet.transform.position = transform.position;
 		bullet_rb = bullet.GetComponent<Rigidbody>();
-		bullet_rb.velocity = Camera.main.transform.forward * 30;
+		bullet_rb.velocity = player.transform.forward * 30;
+		Destroy(bullet, 3f);
     }
 
     // Update is called once per frame

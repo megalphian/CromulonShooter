@@ -23,8 +23,8 @@ public class FpvControl : MonoBehaviour
     // FixedUpdate is called every time the mouse is moved
     void FixedUpdate()
     {
-		x = Input.GetAxis("Mouse Y");
-		y = Input.GetAxis("Mouse X");
+		x = Input.GetAxisRaw("Mouse Y");
+		y = Input.GetAxisRaw("Mouse X");
 		Debug.Log("Current Axis" + x + " : " + y);
 
 		RotateCam(x, y);

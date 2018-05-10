@@ -4,7 +4,7 @@ using System.Collections;
 public class CromulonAttack : MonoBehaviour
 {
 	public int attackAmount = 10;
-	public GameObject player;
+	private GameObject player;
 	private PlayerHealth playerHealth;
 
     // Use this for initialization
@@ -15,10 +15,9 @@ public class CromulonAttack : MonoBehaviour
     }
 
 	void AttackPlayer(){
-		if (playerHealth.getHealth() <= 0) {
-			return;
+		if (playerHealth.getHealth() > 0) {
+			playerHealth.TakeDamage(attackAmount);
 		}
-		playerHealth.TakeDamage(attackAmount);
 	}
 
     // Update is called once per frame
