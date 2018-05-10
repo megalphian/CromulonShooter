@@ -18,7 +18,7 @@ public class CromulonSpawner : MonoBehaviour {
 	public void Spawner()
     {
         int randomSpawnIndex = Random.Range(0, spawnPoints.Length);
-        GameObject buffer = Instantiate(enemy, spawnPoints[randomSpawnIndex].position, spawnPoints[randomSpawnIndex].rotation);
+        Instantiate(enemy, spawnPoints[randomSpawnIndex].position, spawnPoints[randomSpawnIndex].rotation);
     }
 
 	// Use this for initialization

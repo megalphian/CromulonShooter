@@ -11,13 +11,21 @@ public class CromulonAttack : MonoBehaviour
     void Awake()
     {
 		player = GameObject.FindGameObjectWithTag("Player");
-		//playerHealth = player.GetComponent<PlayerHealth> ();
+		playerHealth = player.GetComponent<PlayerHealth> ();
     }
-   
+
+	void AttackPlayer(){
+		if (playerHealth.getHealth() <= 0) {
+			return;
+		}
+		playerHealth.TakeDamage(attackAmount);
+	}
+
     // Update is called once per frame
     void Update()
     {
-		if (transform.position.z <= GetComponent<CromulonMovement>().getThreshold() + 1){
+		if (transform.position.z <= (GetComponent<CromulonMovement>().getThreshold() + 1)){
+			AttackPlayer();
 			Destroy(gameObject);
 		}
     }

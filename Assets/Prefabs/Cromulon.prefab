@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 136903394788018502}
   - component: {fileID: 114294089501936758}
   - component: {fileID: 65923705437988086}
+  - component: {fileID: 114755441390431026}
   m_Layer: 0
   m_Name: Cromulon
   m_TagString: Untagged
@@ -109,6 +110,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9edc7e9a5cec47978fe75378bc516b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114755441390431026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1361934775507088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4266c70c02bb843e492e60a5de57bd79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackAmount: 10
+  player: {fileID: 0}
 --- !u!136 &136903394788018502
 CapsuleCollider:
   m_ObjectHideFlags: 1
