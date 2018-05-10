@@ -20,7 +20,7 @@ public class FpvControl : MonoBehaviour
 		transform.eulerAngles -= cameraRotation;
 	}
 
-    // FixedUpdate is called every time the arrow key is pressed
+    // FixedUpdate is called every time the mouse is moved
     void FixedUpdate()
     {
 		x = Input.GetAxis("Mouse Y");
