@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerHealth : MonoBehaviour
 {
     
-	private int startingHealth = 20;
+	private int startingHealth = 100;
 	private int currentHealth;
 
 	private bool isDead;
