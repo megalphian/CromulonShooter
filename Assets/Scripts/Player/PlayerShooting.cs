@@ -10,7 +10,7 @@ public class PlayerShooting : MonoBehaviour
 
 	private void Awake()
 	{
-		player = GameObject.FindGameObjectWithTag("Player");
+		player = GameObject.FindWithTag("Player");
 	}
     
 	// Use this for initialization

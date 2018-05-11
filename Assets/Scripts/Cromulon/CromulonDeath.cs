@@ -4,9 +4,9 @@ using System.Collections;
 public class CromulonDeath : MonoBehaviour
 {
 	bool isHit;
-
-  //  // Use this for initialization
-    void OnTriggerEnter(Collider newObject)
+	private int scoreValue = 10;
+    
+	void OnTriggerEnter(Collider newObject)
     {
 		isHit = true;
     }
@@ -16,6 +16,7 @@ public class CromulonDeath : MonoBehaviour
     {
 		if (isHit){
 			Destroy(gameObject);
+			Scorer.score += scoreValue;
 		}
     }
 }

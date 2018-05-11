@@ -10,10 +10,7 @@ public class CromulonSpawner : MonoBehaviour {
 	public float spawnInterval = 4f;
     
 	public GameObject enemy;
-
-	//private void DefineSpawnPoints(Vector3 position){
-		
-	//}
+    
 
 	public void Spawner()
     {
