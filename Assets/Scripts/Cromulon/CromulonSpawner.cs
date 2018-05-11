@@ -5,8 +5,6 @@ using UnityEngine;
 public class CromulonSpawner : MonoBehaviour {
     
 	public Transform[] spawnPoints;
-
-	public float offsetFromCenter = 4f;
 	public float spawnInterval = 4f;
     
 	public GameObject enemy;
@@ -14,13 +12,15 @@ public class CromulonSpawner : MonoBehaviour {
 
 	public void Spawner()
     {
+		//Choose a random spawn point from list of spawn points
         int randomSpawnIndex = Random.Range(0, spawnPoints.Length);
+        //Create an instance of the Cromulon at the transform
         Instantiate(enemy, spawnPoints[randomSpawnIndex].position, spawnPoints[randomSpawnIndex].rotation);
     }
 
-	// Use this for initialization
+	// At initialization
 	public void Start () {
-		//DefineSpawnPoints(rootSpawnPoint.position);
+		//Starts Coroutine to spawn Cromulons in the given interval
 		InvokeRepeating("Spawner", spawnInterval, spawnInterval);
 	}
 }

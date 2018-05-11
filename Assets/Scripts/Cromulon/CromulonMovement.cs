@@ -5,12 +5,17 @@ using UnityEngine;
 public class CromulonMovement : MonoBehaviour {
 
 	private Vector3 EndPosition;
-	private float speed = 0.5f;
 	private float z_threshold = -12f;
 
-	// Use this for initialization
-	private void Move () {
+	public float speed = 0.5f;
+
+	private void Start()
+	{
 		EndPosition.Set(transform.position.x, transform.position.y, z_threshold);
+	}
+
+	// Function to handle movement
+	private void Move () {
 		transform.position = Vector3.Lerp(transform.position, EndPosition, Time.deltaTime*speed);
 	}
 
@@ -19,7 +24,8 @@ public class CromulonMovement : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update() {
+		//Move towards given goal every frame
 		Move();
 	}
 }

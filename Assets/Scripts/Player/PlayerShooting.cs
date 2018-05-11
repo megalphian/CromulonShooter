@@ -20,7 +20,7 @@ public class PlayerShooting : MonoBehaviour
 		bullet.transform.position = transform.position;
 		bullet_rb = bullet.GetComponent<Rigidbody>();
 		bullet_rb.velocity = player.transform.forward * 30;
-		Destroy(bullet, 3f);
+		Destroy(bullet, 2.5f);
     }
 
     // Update is called once per frame

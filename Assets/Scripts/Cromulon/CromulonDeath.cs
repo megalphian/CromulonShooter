@@ -3,10 +3,13 @@ using System.Collections;
 
 public class CromulonDeath : MonoBehaviour
 {
-	bool isHit;
-	private int scoreValue = 10;
-    
-	void OnTriggerEnter(Collider newObject)
+	private bool isHit;
+
+	public int scoreValue = 10;
+	public delegate void DeathAction(int scoreValue);
+	public static event DeathAction onDeath;
+
+	void OnTriggerEnter(Collider _)
     {
 		isHit = true;
     }
@@ -16,7 +19,9 @@ public class CromulonDeath : MonoBehaviour
     {
 		if (isHit){
 			Destroy(gameObject);
-			Scorer.score += scoreValue;
+			if (onDeath != null){
+				onDeath(scoreValue);
+			}
 		}
     }
 }
