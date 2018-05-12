@@ -31,9 +31,9 @@ For Mac: Download repository and create a project in Unity. Use the "Assets/Scen
 
 # Lessons learnt
 
-## Unity and its components (eg. GameObjects, Colliders, Events, UI, etc.)
-## C# and the Unity Engine library
-## Memory management in games
+#### Unity and its components (eg. GameObjects, Colliders, Events, UI, etc.)
+#### C# and the Unity Engine library
+#### Memory management in games
 
 # Screenshots
 
