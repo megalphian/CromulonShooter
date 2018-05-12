@@ -1,31 +1,36 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
     
-	private int startingHealth = 100;
+	public int maxHealth = 100;
+	public Canvas ui;
+	public delegate void HealthBar(int health);
+	public static event HealthBar changeHealth;
+
 	private int currentHealth;
 
 	private bool isDead;
-	private GameObject ui;
     
     // Use this for initialization
     void Awake()
-    {
-		currentHealth = startingHealth;
-		HealthBar.health = currentHealth;
-		ui = GameObject.FindGameObjectWithTag("UI");
+	{
+		currentHealth = maxHealth;
 		ui.transform.GetChild(0).gameObject.SetActive(false);
     }
     
 	void PlayerDeath(){
-		GameOver.isGameOver = true;
+		GameOver.isGameOver = true; //change
 	}
 
 	public void TakeDamage(int damageAmount){
 		currentHealth -= damageAmount;
-		HealthBar.health = currentHealth;
+		if (changeHealth != null)
+        {
+            changeHealth(currentHealth);
+        }
 		if (currentHealth <= 0){
 			PlayerDeath();
 		}
@@ -35,10 +40,4 @@ public class PlayerHealth : MonoBehaviour
 		return currentHealth;
 	}
 
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

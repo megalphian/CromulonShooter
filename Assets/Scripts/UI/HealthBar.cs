@@ -4,20 +4,29 @@ using System.Collections;
 
 public class HealthBar : MonoBehaviour
 {
-	public static int health;
-	private int maxHealth = 100;
+	public int maxHealth = 100;
 	private Slider healthBar;
+
+	private void OnEnable()
+    {
+        PlayerHealth.changeHealth += UpdateHealth; //Change
+    }
+
+    private void OnDisable()
+    {
+        PlayerHealth.changeHealth -= UpdateHealth; //Change
+    }
 
     // Use this for initialization
     void Awake()
     {
 		healthBar = GetComponent<Slider>();
-		health = maxHealth;
+		healthBar.value = maxHealth;
     }
-
+       
     // Update is called once per frame
-    void Update()
-    {
+    void UpdateHealth(int health)
+	{
 		healthBar.value = health;
     }
 }

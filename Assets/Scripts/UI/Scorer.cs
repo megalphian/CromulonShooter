@@ -9,18 +9,17 @@ public class Scorer : MonoBehaviour
 
 	private void OnEnable()
 	{
-		CromulonDeath.onDeath += addScore;
+		CromulonDeath.onDeath += addScore; //Change
 	}
 
 	private void OnDisable()
 	{
-		CromulonDeath.onDeath -= addScore;
+		CromulonDeath.onDeath -= addScore; //Change
 	}
 
 	// Use this for initialization
 	void Awake()
 	{
-		
 		HeaderText = GetComponent<Text>();
 		score = 0;
     }
