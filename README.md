@@ -36,8 +36,13 @@ For Mac: Download repository and create a project in Unity. Use the "Assets/Scen
 #### C# and the Unity Engine library
 #### Memory management in games
 
+# Current Issue
+
+Camera control is not perfect. When tilting all the way up or down, camera does flip. Currently working on a fix for that
+
 # Screenshots
 
 ![image1]
 
 ![image2]
+
