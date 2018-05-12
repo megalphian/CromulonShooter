@@ -6,12 +6,14 @@ public class FpvControl : MonoBehaviour
 	private Vector3 cameraRotation;
 	private float x, y;
 
+    //Lock cursor in the center of the screen and hid it at startup
 	private void Start()
 	{
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
 	}
 
+    //Rotate Camera function
 	void RotateCam()
 	{
 		x = Mathf.Clamp(x, -90, 90);

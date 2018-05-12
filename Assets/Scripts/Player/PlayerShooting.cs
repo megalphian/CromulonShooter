@@ -10,7 +10,7 @@ public class PlayerShooting : MonoBehaviour
 
 	private Transform GunPosition;
 
-	public GameObject bulletGameObject;
+	[SerializeField] private GameObject bulletGameObject;
 
     //Get the gun child from the Tree
 	private void Awake()

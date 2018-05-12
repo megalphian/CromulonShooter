@@ -6,7 +6,7 @@ public class HealthBar : MonoBehaviour
 {
 	private Slider healthBar;
 
-	public int maxHealth = 100;
+	[SerializeField] private int maxHealth = 100;
 
     //Add the Update Health function to the Event Manager to subscribe to the Player's damage even
 	private void OnEnable()

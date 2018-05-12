@@ -6,7 +6,7 @@ public class GameOver : MonoBehaviour
 {
 	private bool isGameOver;
 	private Text GameOverText;
-	public PlayerHealth health;
+	[SerializeField] private PlayerHealth health;
    
     void Start()
 	{

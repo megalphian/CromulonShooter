@@ -5,7 +5,8 @@ public class CromulonDeath : MonoBehaviour
 {
 	private bool isHit;
 
-	public int scoreValue = 10;
+	[SerializeField] private int scoreValue = 10;
+
 	public delegate void DeathAction(int scoreValue);
 	public static event DeathAction OnDeath;
 

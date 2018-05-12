@@ -7,7 +7,7 @@ public class CromulonMovement : MonoBehaviour {
 	private Vector3 EndPosition;
 	private float z_threshold = -12f;
 
-	public float speed = 0.5f;
+	[SerializeField] private float speed = 0.5f;
 
 	private void Start()
 	{

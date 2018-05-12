@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CromulonSpawner : MonoBehaviour {
     
-	public Transform[] spawnPoints;
-	public float spawnInterval = 4f;
+	[SerializeField] private Transform[] spawnPoints;
+	[SerializeField] private float spawnInterval = 2f;
     
-	public GameObject enemy;
+	[SerializeField] private GameObject enemy;
     
 
 	public void Spawner()

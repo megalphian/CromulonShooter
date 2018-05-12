@@ -6,8 +6,8 @@ public class CromulonAttack : MonoBehaviour
 	private GameObject player;
     private PlayerHealth playerHealth;
 
-	public int attackAmount = 10;
-	public string GameObjectTag = "Player";
+	[SerializeField] private int attackAmount = 10;
+	[SerializeField] private string GameObjectTag = "Player";
 
     // Get the player's health object to damage the player
     private void Awake(){

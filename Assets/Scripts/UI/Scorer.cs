@@ -6,7 +6,7 @@ public class Scorer : MonoBehaviour
 {
 	private Text HeaderText;
 	private int score;
-	public PlayerHealth playerHealth;
+	[SerializeField] private PlayerHealth playerHealth;
 
 	private void OnEnable()
 	{
