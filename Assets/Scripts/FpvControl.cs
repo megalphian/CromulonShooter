@@ -5,19 +5,14 @@ public class FpvControl : MonoBehaviour
 {
 	private Vector3 cameraRotation;
 	private float x, y;
-
-
-    // Initializing Camera Position
-    void Start()
-    {
-		//cameraObject = Camera.main;
-		//cameraPosition = cameraObject.transform.localPosition;
-    }
-
-    void RotateCam(float x, float y)
+       
+    void RotateCam()
 	{
-		cameraRotation.Set(x, -y, 0f);
-		transform.eulerAngles -= cameraRotation;
+		if (x > -90 && x < 90)
+		{
+			cameraRotation.Set(x, -y, 0f);
+			transform.eulerAngles -= cameraRotation;
+		}
 	}
 
     // FixedUpdate is called every time the mouse is moved
@@ -27,6 +22,6 @@ public class FpvControl : MonoBehaviour
 		y = Input.GetAxisRaw("Mouse X");
 		Debug.Log("Current Axis" + x + " : " + y);
 
-		RotateCam(x, y);
+		RotateCam();
     }
 }

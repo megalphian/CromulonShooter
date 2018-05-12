@@ -4,38 +4,34 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
-    
-	public int maxHealth = 100;
-	public Canvas ui;
-	public delegate void HealthBar(int health);
-	public static event HealthBar changeHealth;
-
 	private int currentHealth;
 
-	private bool isDead;
+	public int maxHealth = 100;
+
+	public delegate void Damaged(int health);
+	public static event Damaged ChangeHealth;
     
-    // Use this for initialization
+
+    // Initalize Health 
     void Awake()
 	{
 		currentHealth = maxHealth;
-		ui.transform.GetChild(0).gameObject.SetActive(false);
     }
-    
-	void PlayerDeath(){
-		GameOver.isGameOver = true; //change
-	}
-
+       
+    //Take Damage if Cromulon passes through
 	public void TakeDamage(int damageAmount){
 		currentHealth -= damageAmount;
-		if (changeHealth != null)
+		if (currentHealth <= 0)
         {
-            changeHealth(currentHealth);
+    		currentHealth = 0;
         }
-		if (currentHealth <= 0){
-			PlayerDeath();
-		}
+		if (ChangeHealth != null)
+        {
+            ChangeHealth(currentHealth);
+        }
 	}
-
+    
+    //Get health property
 	public int getHealth(){
 		return currentHealth;
 	}

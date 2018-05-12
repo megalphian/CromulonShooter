@@ -4,27 +4,29 @@ using System.Collections;
 
 public class HealthBar : MonoBehaviour
 {
-	public int maxHealth = 100;
 	private Slider healthBar;
 
+	public int maxHealth = 100;
+
+    //Add the Update Health function to the Event Manager to subscribe to the Player's damage even
 	private void OnEnable()
     {
-        PlayerHealth.changeHealth += UpdateHealth; //Change
+        PlayerHealth.ChangeHealth += UpdateHealth; //Change
     }
 
     private void OnDisable()
     {
-        PlayerHealth.changeHealth -= UpdateHealth; //Change
+        PlayerHealth.ChangeHealth -= UpdateHealth; //Change
     }
 
-    // Use this for initialization
+    // Initalize the Slider
     void Awake()
     {
 		healthBar = GetComponent<Slider>();
 		healthBar.value = maxHealth;
     }
        
-    // Update is called once per frame
+    // Update health once per frame
     void UpdateHealth(int health)
 	{
 		healthBar.value = health;

@@ -16,6 +16,7 @@ public class CromulonMovement : MonoBehaviour {
 
 	// Function to handle movement
 	private void Move () {
+		//Linear interpolation to the goal
 		transform.position = Vector3.Lerp(transform.position, EndPosition, Time.deltaTime*speed);
 	}
 

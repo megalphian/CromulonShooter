@@ -528,7 +528,7 @@ GameObject:
   - component: {fileID: 918207883}
   - component: {fileID: 918207885}
   m_Layer: 5
-  m_Name: DeathText
+  m_Name: GameOver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -547,11 +547,11 @@ RectTransform:
   m_Father: {fileID: 919927853}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 315.5, y: 30}
-  m_Pivot: {x: 0, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0.0000009536743}
+  m_SizeDelta: {x: 315.5, y: 56.1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &918207883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -564,7 +564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.32384276, b: 0.9339623, a: 1}
+  m_Color: {r: 0.7735849, g: 0.17592132, b: 0.14231044, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -575,16 +575,18 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 20
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You're one dead Rick
+  m_Text: 'You''re one dead Rick
+
+    GAME OVER'
 --- !u!222 &918207884
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -602,6 +604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1859e3ff6f1cc473bb3436e5bf9998c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 940011814}
 --- !u!1 &919927849
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,6 +702,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &940011808 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1098413610850992, guid: acb0f86b900854128a5fa70c8de1ef2b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1801853335}
+--- !u!114 &940011809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 940011808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453b044f1ced84f5f8ccbe88635c57a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletGameObject: {fileID: 1949456244684246, guid: 9123a5c18586f4d0dbdc41084bd2b1c0,
+    type: 2}
+--- !u!114 &940011814 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114251341889400650, guid: acb0f86b900854128a5fa70c8de1ef2b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1801853335}
+  m_Script: {fileID: 11500000, guid: 40a519942576d4e668cf6566415afd54, type: 3}
 --- !u!1 &1194127961
 GameObject:
   m_ObjectHideFlags: 0
@@ -1031,7 +1058,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114251341889400650, guid: acb0f86b900854128a5fa70c8de1ef2b,
+        type: 2}
+      propertyPath: GameOver
+      value: 
+      objectReference: {fileID: 918207883}
+    m_RemovedComponents:
+    - {fileID: 114568598364162630, guid: acb0f86b900854128a5fa70c8de1ef2b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: acb0f86b900854128a5fa70c8de1ef2b, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1818590451
@@ -1225,7 +1258,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 35
     m_FontStyle: 3
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
@@ -1252,6 +1285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c06d24442e34c4aa7bc62a1bb94de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth: {fileID: 940011814}
 --- !u!1 &1897385024
 GameObject:
   m_ObjectHideFlags: 0

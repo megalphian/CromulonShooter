@@ -111,6 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9edc7e9a5cec47978fe75378bc516b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0.5
 --- !u!114 &114444507100812560
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -122,7 +123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17f3238ea2b4248988ce879fac80bf9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scorer: {fileID: 0}
   scoreValue: 10
 --- !u!114 &114755441390431026
 MonoBehaviour:
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackAmount: 10
-  player: {fileID: 1098413610850992, guid: acb0f86b900854128a5fa70c8de1ef2b, type: 2}
+  GameObjectTag: Player
 --- !u!136 &136903394788018502
 CapsuleCollider:
   m_ObjectHideFlags: 1
