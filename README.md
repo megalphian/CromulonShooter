@@ -16,6 +16,7 @@ Requires MacOS
 # To Play
 
 MOUSE - AIM
+
 LEFT CLICK - FIRE PROJECTILE
 
 # Rules
