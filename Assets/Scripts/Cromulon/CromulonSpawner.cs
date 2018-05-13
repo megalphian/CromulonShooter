@@ -9,6 +9,11 @@ public class CromulonSpawner : MonoBehaviour {
     
 	[SerializeField] private GameObject enemy;
     
+	public void Construct(Transform[] points, float time, GameObject _gameObject){
+		spawnPoints = points;
+		spawnInterval = time;
+		enemy = _gameObject;
+	}
 
 	public void Spawner()
     {
@@ -19,7 +24,7 @@ public class CromulonSpawner : MonoBehaviour {
     }
 
 	// At initialization
-	public void Start () {
+	void Start () {
 		//Starts Coroutine to spawn Cromulons in the given interval
 		InvokeRepeating("Spawner", spawnInterval, spawnInterval);
 	}
