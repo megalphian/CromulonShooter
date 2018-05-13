@@ -10,7 +10,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>test</string>
+	<string>CromulonShooter</string>
 	<key>CFBundleGetInfoString</key>
 	<string>Unity Player version 2018.1.0f2 (d4d99f31acba). (c) 2018 Unity Technologies ApS. All rights reserved.</string>
 	<key>CFBundleIconFile</key>
