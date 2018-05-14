@@ -29,7 +29,7 @@ LEFT CLICK - FIRE PROJECTILE
 
 # Source Build
 
-For Mac: Download repository and create a project in Unity. Use the "Assets/Scenes/MainScene.unity" Scene to load the game environment
+For Mac: Download repository and create a project in Unity. Use the "Assets/Scenes/MainScene.unity" Scene to load the game environment. Ensure playmode tests are enabled to ensure the test scripts are recognized when Unity tries to build the game
 
 # Lessons learnt
 
