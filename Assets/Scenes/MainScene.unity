@@ -295,7 +295,8 @@ Prefab:
       propertyPath: spawnInterval
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114742116807506814, guid: 2fcb4ee6127f640a99041fbe535c272f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2fcb4ee6127f640a99041fbe535c272f, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &290328797
@@ -396,6 +397,28 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 446995317}
+--- !u!1 &546798260 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1100021904394496, guid: 2fcb4ee6127f640a99041fbe535c272f,
+    type: 2}
+  m_PrefabInternal: {fileID: 269380103}
+--- !u!114 &546798261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 546798260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e91454160034ecea7654a94a75a03b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 290328799}
+  - {fileID: 151621193}
+  - {fileID: 1779389356}
+  spawnInterval: 2
+  enemy: {fileID: 1361934775507088, guid: 7316aa89d896a4370a8fa153f878ea5b, type: 2}
 --- !u!1 &646679157
 GameObject:
   m_ObjectHideFlags: 0
